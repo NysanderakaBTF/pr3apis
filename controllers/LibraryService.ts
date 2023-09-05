@@ -18,20 +18,6 @@ class LibraryService {
         await db.delete(libraryToBooks).where(eq(libraryToBooks.libraryId, lib_id))
         await db.delete(libraries).where(eq(libraries.id, lib_id))
     }
-
-    // static async getLibraryWithBooks(lib_id: number) {
-    //     return await db.query.libraries.findFirst({
-    //         with: {
-    //             bookToLibrary:{
-    //                 columns:{
-    //                     bookId: true,
-    //                     libraryId: false
-    //                 }
-    //             }
-    //         },
-    //         where: eq(libraries.id, lib_id)
-    //     })
-    // }
     static async getLibraryWithBooks(lib_id) {
         return await db.selectDistinct().from(libraryToBooks)
             .leftJoin(libraries, eq(libraryToBooks.libraryId, libraries.id))
