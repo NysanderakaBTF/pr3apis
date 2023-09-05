@@ -8,6 +8,4 @@ COPY . ./
 
 RUN npm install
 
-RUN npm run migrate
-
-CMD ["nodemon", "--exec", "node", ".\index.js"]
+#RUN npm run migrate
