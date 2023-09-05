@@ -1,0 +1,27 @@
+{
+  "name": "employees",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "drizzle-kit generate:pg",
+    "migrate": "ts-node --files ./db/migrator.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.5.9",
+    "body-parser": "^1.20.2",
+    "drizzle-orm": "^0.28.5",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "postgres": "^3.3.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.19.13"
+  }
+}
